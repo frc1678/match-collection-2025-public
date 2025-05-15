@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/objective_match_collection_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:keepScreenOn="true"
+    android:orientation="horizontal"
+    android:padding="@dimen/very_small">
+
+    <FrameLayout
+        android:id="@+id/fragment_frame"
+        android:name="com.frc1678.match_collection.ObjectiveScoringPanel"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/undo_redo_btn_frame"
+            android:name="com.frc1678.match_collection.UndoRedoPanel"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.25" />
+
+        <Button
+            android:id="@+id/btn_action_failed"
+            style="@style/btn_action"
+            android:background="@drawable/btn_action_selector_failed"
+            android:text="@string/btn_action_failed" />
+
+        <ToggleButton
+            android:id="@+id/tb_incap"
+            style="@style/btn_action"
+            android:background="@drawable/tb_incap_selector"
+            android:textOff="@string/tb_action_bool_one_off"
+            android:textOn="@string/tb_action_bool_one_on" />
+
+        <TextView
+            android:id="@+id/tv_team_number"
+            style="@style/tv_standard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:textSize="@dimen/smaller_text" />
+
+        <Button
+            android:id="@+id/btn_action_toggle"
+            style="@style/btn_action"
+            android:background="@drawable/btn_action_selector_poach"
+            android:text="@string/btn_action_poach" />
+
+        <Button
+            android:id="@+id/btn_timer"
+            style="@style/btn_action"
+            android:background="@drawable/btn_proceed_selector"
+            android:enabled="true"
+            android:text="@string/btn_timer_start" />
+
+        <Button
+            android:id="@+id/btn_proceed_edit"
+            style="@style/btn_action"
+            android:background="@drawable/btn_proceed_selector"
+            android:text="@string/btn_to_teleop" />
+
+    </LinearLayout>
+
+</LinearLayout>

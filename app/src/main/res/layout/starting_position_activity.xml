@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/compose_map"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="12" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="3">
+
+        <ToggleButton
+            android:id="@+id/toggle_preload"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:textOff="@string/preloaded_true"
+            android:textOn="@string/preloaded_false"
+            android:background="@color/light_gray"
+            android:layout_margin="@dimen/very_small"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="@dimen/small"
+            android:padding="@dimen/very_small"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_pos_team_number"
+            style="@style/tv_standard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/btn_no_show"
+            style="@style/btn_starting_position"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="@string/btn_no_show" />
+
+        <Button
+            android:id="@+id/btn_switch_orientation"
+            style="@style/btn_starting_position"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="@string/btn_switch_orientation" />
+
+        <Button
+            android:id="@+id/btn_proceed_starting_position"
+            style="@style/btn_starting_position"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_proceed"
+            android:text="@string/btn_proceed" />
+
+    </LinearLayout>
+
+</LinearLayout>

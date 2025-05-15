@@ -1,0 +1,210 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="btn_white" parent="android:Widget">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1.5</item>
+        <item name="android:background">@drawable/btn_white_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/smaller_text</item>
+    </style>
+
+    <style name="et_standard_linear_layout_number" parent="android:Widget">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:inputType">number</item>
+        <item name="android:gravity">center|top</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="tv_standard_linear_layout" parent="android:Widget">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/very_small</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/darker_gray</item>
+    </style>
+
+    <style name="tv_standard_spinner" parent="android:Widget">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">@dimen/very_small</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/small</item>
+        <item name="android:padding">@dimen/very_small</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="view_separator_horizontal" parent="android:Widget">
+        <item name="android:background">@color/black</item>
+        <item name="android:layout_height">@dimen/very_very_small</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="view_separator_vertical" parent="android:Widget">
+        <item name="android:background">@color/black</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">@dimen/very_very_small</item>
+    </style>
+
+    <style name="et_text_input_layout" parent="android:Widget">
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="goal_position_label" parent="android:Widget">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="btn_action" parent="android:Widget">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">@dimen/very_small</item>
+        <item name="android:padding">@dimen/very_small</item>
+        <item name="android:enabled">false</item>
+        <item name="android:autoSizeMaxTextSize">@dimen/small_text</item>
+        <item name="android:autoSizeMinTextSize">1sp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+    </style>
+
+    <style name="btn_action_hor" parent="android:Widget">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">@dimen/very_small</item>
+        <item name="android:enabled">false</item>
+        <item name="android:autoSizeMaxTextSize">@dimen/small_text</item>
+        <item name="android:autoSizeMinTextSize">1sp</item>
+        <item name="android:autoSizeTextType">uniform</item>
+    </style>
+
+    <style name="intake_header" parent="android:Widget">
+        <item name="android:layout_weight">.3</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+
+
+    </style>
+
+    <style name="btn_proceed" parent="android:Widget">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/small_text</item>
+        <item name="android:layout_margin">@dimen/very_small</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="btn_plus" parent="android:Widget">
+        <item name="android:background">@drawable/btn_plus_selector</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:text">@string/btn_plus</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/small</item>
+    </style>
+
+    <style name="btn_minus" parent="android:Widget">
+        <item name="android:background">@drawable/btn_minus_selector</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:text">@string/btn_minus</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/small_text</item>
+    </style>
+
+    <style name="tv_subj_data_label" parent="android:Widget">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginBottom">@dimen/very_very_small</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tv_team_number_subj" parent="android:Widget">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/medium_text</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="tb_subj_defense" parent="android:Widget">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginVertical">@dimen/very_small</item>
+        <item name="android:gravity">top|center</item>
+        <item name="android:paddingVertical">@dimen/smaller_than_very_small</item>
+        <item name="android:textSize">@dimen/smallerer_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="tv_standard" parent="android:Widget">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">.9</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/small_text</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="btn_starting_position" parent="android:Widget">
+        <item name="android:textSize">@dimen/smaller_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@color/light_gray</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginHorizontal">10dp</item>
+    </style>
+
+    <style name="tb_collection_objective_intake_game_pieces" parent="android:Widget">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">@dimen/small</item>
+    </style>
+
+</resources>

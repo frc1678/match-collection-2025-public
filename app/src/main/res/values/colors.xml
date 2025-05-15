@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="light_gray">#efefef</color>
+    <color name="gray">#B6B6B6</color>
+    <color name="darker_gray">#8e8e8e</color>
+    <color name="transparent">#ffffff00</color>
+    <color name="starting_position_selected">#FF9800</color>
+
+    <color name="alliance_red_light">#FF6659</color>
+    <color name="alliance_red_med">#D0372C</color>
+    <color name="alliance_blue_light">#3399ff</color>
+    <color name="alliance_blue_med">#1470CD</color>
+    <color name="alliance_red_dark">#8b0000</color>
+    <color name="alliance_blue_dark">#00008b</color>
+
+    <color name="cone_yellow">#ffe996</color>
+    <color name="cone_yellow_pressed">#fcf5c7</color>
+    <color name="cube_purple">#bd7fdb</color>
+    <color name="cube_purple_pressed">#3399ff</color>
+
+    <color name="blue_error_popup_borders">#0F5EAE</color>
+
+    <color name="action_yellow">#F8ED89</color>
+    <color name="action_yellow_pressed">#FFF599</color>
+    <color name="action_orange">#E29578</color>
+    <color name="action_orange_pressed">#D8A18C</color>
+    <color name="action_blue">#2AB7CA</color>
+    <color name="action_blue_pressed">#7DBCC5</color>
+    <color name="action_red">#EF6868</color>
+    <color name="action_red_pressed">#ED8280</color>
+    <color name="action_green">#5FC863</color>
+    <color name="action_green_pressed">#8AD364</color>
+    <color name="action_pink">#DD7FB0</color>
+    <color name="action_pink_pressed">#EF9EC7</color>
+
+    <color name="proceed_blue">#2AF5FF</color>
+    <color name="proceed_blue_border">#23C9D1</color>
+    <color name="proceed_pressed">#17A9C3</color>
+    <color name="proceed_pressed_border">#118291</color>
+    <color name="incap_white">#cff0c7</color>
+    <color name="incap_white_activated">#a7cc8f</color>
+    <color name="incap_white_activated_pressed">#cff0c7</color>
+    <color name="incap_white_pressed">#a7cc8f</color>
+    <color name="preloaded_white_unchecked">#FFD598</color>
+    <color name="preloaded_white">#FF9800</color>
+    <color name="preloaded_white_activated">#FF5722</color>
+    <color name="preloaded_white_activated_pressed">#FF9800</color>
+    <color name="preloaded_white_pressed">#FF5722</color>
+    <color name="climb_purple_start">#EDCDEA</color>
+    <color name="climb_purple_end">#E7BBE3</color>
+    <color name="climb_pressed">#C184BE</color>
+    <color name="climb_pressed_border">#A849A7</color>
+    <color name="climb_level_orange">#FBB45A</color>
+    <color name="climb_level_orange_border">#F89A53</color>
+    <color name="climb_level_orange_pressed">#E4AD67</color>
+    <color name="climb_level_orange_border_pressed">#F4A66B</color>
+    <color name="climb_timer_blue">#2AF5FF</color>
+    <color name="climb_timer_blue_border">#11AAB1</color>
+    <color name="climb_timer_blue_pressed">#0DCAD8</color>
+    <color name="climb_timer_blue_border_pressed">#08888E</color>
+    <color name="undo_purple">#B088F6</color>
+    <color name="undo_purple_pressed">#9D6EF1</color>
+    <color name="redo_green">#8FCF8B</color>
+    <color name="redo_green_pressed">#61BC5B</color>
+
+    <color name="selected_start">#FFEB3B</color>
+    <color name="red_start_one">#FFCCCB</color>
+    <color name="red_start_two">#FFA4A2</color>
+    <color name="red_start_three">#FF867C</color>
+    <color name="red_start_four">#FF6F60</color>
+    <color name="blue_start_one">#C3FDFF</color>
+    <color name="blue_start_two">#9BE7FF</color>
+    <color name="blue_start_three">#80D6FF</color>
+    <color name="blue_start_four">#6EC6FF</color>
+    <color name="high_text">#FF00C3</color>
+    <color name="low_text">#FF6A00</color>
+
+    <color name="plus_green">#b7e1cd</color>
+    <color name="plus_green_border">#A5CA9E</color>
+    <color name="plus_pressed">#8DBDA7</color>
+    <color name="plus_pressed_border">#70A865</color>
+    <color name="minus_red">#f4c7c3</color>
+    <color name="minus_red_border">#F4AAA4</color>
+    <color name="minus_pressed">#DA9E98</color>
+    <color name="minus_pressed_border">#CA756E</color>
+</resources>

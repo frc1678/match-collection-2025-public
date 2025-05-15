@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <!-- splits screen into 2 columns-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <!-- splits the left half into four sections: match num, team one, team two, team three-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4.5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/tv_standard_linear_layout"
+                    android:text="@string/tv_match_number_input" />
+
+                <EditText
+                    android:id="@+id/et_match_number"
+                    style="@style/et_standard_linear_layout_number"
+                    android:layout_height="128dp"
+                    android:textSize="@dimen/medium_small_text"
+                    android:maxLength="5" />
+
+                <View
+                    style="@style/view_separator_horizontal"
+                    android:layout_height="2dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_team_one"
+                    style="@style/tv_standard_linear_layout"
+                    android:text="@string/tv_team_number_input_one" />
+
+                <EditText
+                    android:id="@+id/et_team_one"
+                    style="@style/et_standard_linear_layout_number"
+                    android:inputType="text"
+                    android:visibility="invisible"
+                    android:textSize="@dimen/medium_small_text"
+                    android:maxLength="5"
+                    android:layout_height="29dp" />
+
+                <View
+                    style="@style/view_separator_horizontal"
+                    android:id="@+id/separator_team_one"
+                    android:layout_height="2dp"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/separator_team_one_two"
+                    style="@style/view_separator_horizontal"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/tv_hint_team_two"
+                    style="@style/tv_standard_linear_layout"
+                    android:layout_height="19dp"
+                    android:text="@string/tv_team_number_input_two"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/et_team_two"
+                    style="@style/et_standard_linear_layout_number"
+                    android:layout_height="29dp"
+                    android:inputType="text"
+                    android:textSize="@dimen/medium_small_text"
+                    android:maxLength="5" />
+
+                <View
+                    android:id="@+id/separator_team_two_three"
+                    style="@style/view_separator_horizontal"
+                    android:layout_height="3dp"
+                    android:visibility="invisible" />
+
+                <View
+                    style="@style/view_separator_horizontal"
+                    android:id="@+id/separator_team_two"
+                    android:layout_height="2dp"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_hint_team_three"
+                    style="@style/tv_standard_linear_layout"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_team_number_input_three"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/et_team_three"
+                    style="@style/et_standard_linear_layout_number"
+                    android:maxLength="5"
+                    android:textSize="@dimen/medium_small_text"
+                    android:visibility="invisible"
+                    android:inputType="text" />
+
+            </LinearLayout>
+
+            <!-- end of left half -->
+        </LinearLayout>
+
+        <!-- vertical border between left and right half -->
+        <View
+            style="@style/view_separator_vertical"
+            android:layout_width="2dp" />
+
+        <!-- splits right half into three -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/blue_toggle_button"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/very_small"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/red_toggle_button"
+                        style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/very_small"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/view_separator_horizontal"
+                    android:layout_height="2dp" />
+
+                <Spinner
+                    android:id="@+id/spinner_scout_name"
+                    style="@style/btn_white" />
+
+                <View
+                    style="@style/view_separator_horizontal"
+                    android:layout_height="2dp" />
+
+                <Button
+                    android:id="@+id/btn_proceed_qr_generate"
+                    style="@style/btn_white"
+                    android:text="@string/btn_proceed" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

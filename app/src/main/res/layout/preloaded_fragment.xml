@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ToggleButton
+        android:id="@+id/toggle_preloaded"
+        style="@style/btn_action"
+        android:layout_height="match_parent"
+        android:textOff="@string/preloaded_true"
+        android:textOn="@string/preloaded_false"
+        android:enabled="true"
+        android:background="@drawable/tb_preloaded_selector" />
+
+</LinearLayout>

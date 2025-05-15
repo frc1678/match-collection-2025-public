@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="quite_small">5dp</dimen>
+    <dimen name="very_very_small">2dp</dimen>
+    <dimen name="smaller_than_very_small">5dp</dimen>
+    <dimen name="very_small">10dp</dimen>
+    <dimen name="small">25dp</dimen>
+    <dimen name="medium">50dp</dimen>
+    <dimen name="large">100dp</dimen>
+    <dimen name="very_large">200dp</dimen>
+    <dimen name="larger_than_very_large">400dp</dimen>
+    <dimen name="very_very_large">700dp</dimen>
+    <dimen name="corner_radius_small">20dp</dimen>
+    <dimen name="very_small_text">10sp</dimen>
+    <dimen name="smaller_text">18sp</dimen>
+    <dimen name="smallerer_text">15sp</dimen>
+    <dimen name="small_text">25sp</dimen>
+    <dimen name="medium_text">35sp</dimen>
+    <dimen name="medium_small_text">30sp</dimen>
+    <dimen name="large_text">50sp</dimen>
+</resources>

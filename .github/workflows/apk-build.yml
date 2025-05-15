@@ -1,0 +1,59 @@
+name: Kotlin release APK build
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Install dependencies
+      run: |
+        sudo apt install zipalign
+        sudo apt install apksigner
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Check out code
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 1 # Latest commit only
+        ref: ${{ github.ref }} 
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+    - name: Install NDK
+      run: echo "y" | $ANDROID_HOME/tools/bin/sdkmanager "ndk;20.1.5948944" | grep -v = || true
+    - name: Build release APK with Gradle
+      run: ./gradlew assembleRelease
+    - name: Sign APK
+      env:
+        SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
+      run: |
+        zipalign -v -p 4 app/build/outputs/apk/release/app-release-unsigned.apk app-release-unsigned-aligned.apk
+        apksigner sign --ks app/signing-key.jks --ks-pass pass:$SIGNING_PASSWORD --out app-release.apk app-release-unsigned-aligned.apk
+    - name: Get latest commit timestamp and short hash
+      id: last_commit
+      run: |
+        GIT_HASH=$(git rev-parse --short "$GITHUB_SHA")
+        GIT_TIMESTAMP=$(git log -1 --date=short --pretty=format:%ct)
+        echo ::set-output name=short_sha::$GIT_HASH
+        echo ::set-output name=timestamp::$GIT_TIMESTAMP
+    - name: Create GitHub release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: automatic-${{ steps.last_commit.outputs.timestamp }}
+        release_name: Release ${{ steps.last_commit.outputs.short_sha }}
+        draft: false
+        prerelease: true
+    - name: Upload APK to GitHub release
+      uses: actions/upload-release-asset@v1.0.1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }} # Pulls from the "create_release" step above
+        asset_path: ./app-release.apk
+        asset_name: ${{ github.repository }}-${{ steps.last_commit.outputs.short_sha }}.apk
+        asset_content_type: application/vnd.android.package-archive
